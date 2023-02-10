@@ -1,3 +1,218 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+:root{
+  --bg-color: #070E27;
+  --crl-white: #FFFFFF;
+  --clr-blue: #0059F7;
+  --clr-lavender: #CCD2E9 ;
+  --clr-cool-gray: #7E8BB6;
+  --space-cadet-color: #162044;
+  --line-color: #4E5A85;
+
+  --font-name: 'Sora', sans-serif;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-name);
+  background-color: var(--bg-color);
+  color: var(--crl-white);
+}
+
+/*=============== THEME ===============*/
+
+
+/*========== Variables Light theme ==========*/
+body.light-theme{
+  --bg-color: rgba(244, 247, 255, 1);
+}
+
+/*=============== HEADER ===============*/
+.header{
+  display: flex;
+  align-items: center;
+  padding: 16px 64px;
+  gap: 12px;
+  border-bottom: 1px solid var(--clr-cool-gray);
+  position: sticky;
+  top: 0px;
+  background-color: var(--bg-color);
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+  left: 80px;
+  top: 36px;
+  gap: 10px;
+}
+
+.header .navigation{
+  margin-left: auto;
+  margin-right: 24px;
+}
+
+.header .nav-list{
+  display: flex;
+  gap: 12px;
+}
+
+.header .nav-list a{
+  text-decoration: none;
+  color: var(--crl-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header .login-btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 24px;
+  left: 1269px;
+  top: 24px;
+  font-weight: 500;
+  color: var(--crl-white);
+  background-color: var(--space-cadet-color);
+  border-radius: 8px;
+}
+
+.header .login-btn{
+  left: 124px;
+  top: 36px;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.section-subtitle,
+.section-title{
+  text-align: center;
+}
+
+.section-subtitle{
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--clr-cool-gray);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.section-title{
+  font-weight: 600;
+  font-size: 48px;
+  margin-bottom: 48px;
+  letter-spacing: -0.03em;
+}
+
+/*========== Buttons ==========*/
+.btn{
+  border: none;
+  border-radius: 8px;
+  padding: 16px 24px;
+  cursor: pointer;
+  color: var(--crl-white);
+  background-color: var(--space-cadet-color);
+}
+
+.btn.btn-primary{
+  background-color: var(--clr-blue);
+}
+
+/*=============== HERO ===============*/
+#hero{
+  padding: 70px 64px;
+}
+
+#hero .welcome,
+#hero .partners{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#hero .welcome{
+  margin-bottom: 48px;
+  max-width: 900px;
+}
+
+#hero .welcome > *{
+  width: 55%;
+}
+
+#hero .welcome .title{
+  left: 190px;
+  top: 168px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 80px;
+  letter-spacing: -0.03em;
+}
+
+#hero .hero-img{
+  margin: 0 auto 48px auto;
+}
+
+#hero .welcome .info{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  color: var(--clr-cool-gray);
+}
+
+#hero .partners{
+  max-width: 900px;
+  gap: 8px;
+}
+
+hr{
+  width: 1060px;
+  height: 1px;
+  left: 190px;
+  top: 1348px;
+  opacity: 0.2;
+  margin-top: 48px;
+  background-color: var(--line-color);
+}
+
+/*=============== FEATURES ===============*/
+#features{
+  padding: 70px 64px;
+}
+
+
+/*=============== HOW ===============*/
+#how{
+  padding: 70px 64px;
+}
+
+#how .row-text .title{
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -0.03em;
+}
+
+#how .row-text .description{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: var(--clr-cool-gray);
+}
+
+/*=============== PRICING ===============*/
+
+
+/*=============== FOOTER ===============*/
+footer{
+  background-color: var(--space-cadet-color);
+}
+
