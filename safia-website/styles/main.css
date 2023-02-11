@@ -8,6 +8,7 @@
   --clr-cool-gray: #7E8BB6;
   --space-cadet-color: #162044;
   --line-color: #4E5A85;
+  --cornflower-blue: #689EFF;
 
   --font-name: 'Sora', sans-serif;
 }
@@ -67,6 +68,10 @@ body.light-theme{
   letter-spacing: 1px;
 }
 
+.header .nav-list a:hover{
+  color: var(--cornflower-blue);
+}
+
 .header .login-btn{
   display: flex;
   flex-direction: row;
@@ -104,8 +109,8 @@ body.light-theme{
 
 .section-title{
   font-weight: 600;
-  font-size: 48px;
-  margin-bottom: 48px;
+  font-size: 50px;
+  margin-bottom: 50px;
   letter-spacing: -0.03em;
 }
 
@@ -119,9 +124,18 @@ body.light-theme{
   background-color: var(--space-cadet-color);
 }
 
+.btn:hover{
+  background-color: var(--cornflower-blue);
+}
+
 .btn.btn-primary{
   background-color: var(--clr-blue);
 }
+
+.btn.btn-primary:hover{
+  background-color: var(--cornflower-blue);
+}
+
 
 /*=============== HERO ===============*/
 #hero{
@@ -187,25 +201,162 @@ hr{
   padding: 70px 64px;
 }
 
+#features .title{
+  padding-left: 360px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -0.03em;
+}
+
+#features .feat-title{
+    padding-bottom: 16px;
+}
+
+#features .description{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  margin-left: 360px;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  color: var(--clr-cool-gray);
+}
+
+#features .container{
+  display: grid;
+  gap: 32px 40px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  padding-left: 300px;
+  padding-right: 300px;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
+#features .container .card{
+  width: 400px;
+  height: 288px;
+  left: 300px;
+  top: 1621px;
+  padding: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 1px solid var(--space-cadet-color);
+  background-color: var(--bg-color);
+  box-shadow: 0px 35px 45px rgba(7, 14, 39, 0.05);
+}
+
+#features .container .card .feat-title{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+
+#features .container .card .card-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: var(--clr-lavender);
+}
+
+#features .container .card i{
+  width: 48px;
+  height: 48px;
+  color: var(--clr-cool-gray);
+}
+
+#features .box{
+  align-items: center;
+  width: 840px;
+  height: 328px;
+  margin: 0 auto;
+  margin-top: 96px;
+  padding: 72px 110px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background-color: var(--clr-blue);
+}
+
+#features .box .subtitle-feat{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+  color: var(--crl-white);
+  opacity: 0.5;
+}
+
+#features .box .feat-title{
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: -0.03em;
+}
+
+#features .box .trial-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 24px;
+  gap: 10px;
+  border-radius: 8px;
+  background-color: var(--cornflower-blue);
+  margin-top: 32px;
+}
+
+#features .box .trial-btn:hover{
+  color: var(--cornflower-blue);
+  background-color: var(--crl-white);
+}
 
 /*=============== HOW ===============*/
 #how{
   padding: 70px 64px;
 }
 
-#how .row-text .title{
+#how .row{
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#how .row .row-img{
+  width: 60%;
+}
+
+#how .row .title{
   font-weight: 600;
   font-size: 36px;
   line-height: 40px;
   letter-spacing: -0.03em;
+  margin-bottom: 12px;
 }
 
-#how .row-text .description{
+#how .row .description{
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: -0.02em;
   color: var(--clr-cool-gray);
+}
+
+#how .row:nth-child(even){
+  flex-direction: row-reverse;
+}
+
+#how .row:not(:last-child){
+  margin-bottom: 48px;
 }
 
 /*=============== PRICING ===============*/
