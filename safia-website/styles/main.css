@@ -102,6 +102,7 @@ body.light-theme{
 .section-subtitle{
   font-weight: 500;
   font-size: 20px;
+  gap: 8px;
   color: var(--clr-cool-gray);
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -272,48 +273,51 @@ hr{
 }
 
 #features .box{
-  align-items: center;
-  width: 840px;
-  height: 328px;
-  margin: 0 auto;
-  margin-top: 96px;
-  padding: 72px 110px;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 96px;
+  border-radius: 24px;
+  padding: 72px 100px;
+  background-color: var(--clr-blue);
+}
+
+
+#features .box .box-container{
+  margin-top: 96px;
   border-radius: 24px;
   background-color: var(--clr-blue);
 }
 
-#features .box .subtitle-feat{
+#features .box .box-container .subtitle-feat{
   font-weight: 500;
   font-size: 20px;
-  line-height: 32px;
   letter-spacing: 0.02em;
   color: var(--crl-white);
   opacity: 0.5;
 }
 
-#features .box .feat-title{
+#features .box .box-container .feat-title{
   font-weight: 600;
   font-size: 36px;
-  line-height: 40px;
   text-align: center;
   letter-spacing: -0.03em;
 }
 
-#features .box .trial-btn{
+#features .box .box-container .trial-btn{
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 24px 20px;
   gap: 10px;
   border-radius: 8px;
   background-color: var(--cornflower-blue);
-  margin-top: 32px;
 }
 
-#features .box .trial-btn:hover{
+#features .box .box-container .trial-btn:hover{
   color: var(--cornflower-blue);
   background-color: var(--crl-white);
 }
@@ -360,6 +364,9 @@ hr{
 }
 
 /*=============== PRICING ===============*/
+#pricing{
+  padding: 70px 64px;
+}
 
 
 /*=============== FOOTER ===============*/
