@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
 
-:root{
+:root,
+:root.dark{
   --bg-color: #070E27;
   --crl-white: #FFFFFF;
   --clr-blue: #0059F7;
@@ -10,8 +11,17 @@
   --line-color: #4E5A85;
   --cornflower-blue: #689EFF;
   --oxford-blue: #081131;
+  --feature-card-bg: #162044;
 
   --font-name: 'Sora', sans-serif;
+}
+
+:root.light{
+  --bg-color: #F4F7FF;
+  --crl-white: #162044;
+  --text-color: #FFFFFF;
+  --space-cadet-color: #98A6C7;
+  --feature-card-bg: #F4F7FF;
 }
 
 html{
@@ -24,12 +34,56 @@ body {
   color: var(--crl-white);
 }
 
-/*=============== THEME ===============*/
+/*=============== CHANGE THEME ===============*/
+input{
+  width: 0;
+  height: 0;
+  display: none;
+  visibility: hidden;
+}
 
+label {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  text-indent: -9999px;
+  height: 30px;
+  width: 60px;
+  vertical-align: middle;
+  border-radius: 78px;
+  background-color: #1F2533;
+  transition: 0.5s ease-out background-color;
+}
 
-/*========== Variables Light theme ==========*/
-body.light-theme{
-  --bg-color: rgba(244, 247, 255, 1);
+label::after,
+label::before {
+  content: '';
+}
+
+label::after{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 78px;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 193, 135, 0.96);
+  box-shadow: -3.9px 6.5px 5.2px rgba(183, 183, 183, 0.35), 0px 0px 11.7px rgba(255, 193, 135, 0.6), 
+    inset 0px -2.6px 5.2px #FFA149, inset 0px 2.6px 5.2px #FFD0A5;
+}
+
+input:checked + label::after{
+  left: calc(100% - 25px);
+  background-color: var(--crl-white);
+}
+
+input:checked + label::before{
+  left: 30px;
+}
+
+input:checked + label{
+  background-color: #6CB8FF;
 }
 
 /*=============== HEADER ===============*/
@@ -59,6 +113,7 @@ body.light-theme{
 
 .header .nav-list{
   display: flex;
+  list-style-type: none;
   gap: 12px;
 }
 
@@ -85,14 +140,8 @@ body.light-theme{
   color: var(--crl-white);
   background-color: var(--space-cadet-color);
   border-radius: 8px;
-}
-
-.header .login-btn{
-  left: 124px;
-  top: 36px;
   font-size: 24px;
   line-height: 32px;
-  font-weight: 600;
 }
 
 .section-subtitle,
@@ -122,7 +171,7 @@ body.light-theme{
   border-radius: 8px;
   padding: 16px 24px;
   cursor: pointer;
-  color: var(--crl-white);
+  color: var(--text-color) !important;
   background-color: var(--space-cadet-color);
 }
 
@@ -137,7 +186,6 @@ body.light-theme{
 .btn.btn-primary:hover{
   background-color: var(--cornflower-blue);
 }
-
 
 /*=============== HERO ===============*/
 #hero{
@@ -247,9 +295,14 @@ hr{
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  border: 1px solid var(--space-cadet-color);
+  border: 1px solid var(--feature-card-bg);
   background-color: var(--bg-color);
   box-shadow: 0px 35px 45px rgba(7, 14, 39, 0.05);
+}
+
+#features .container .card:hover{
+  color: var(--text-color);
+  background-color: #081131;
 }
 
 #features .container .card .feat-title{
@@ -295,7 +348,7 @@ hr{
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 0.02em;
-  color: var(--crl-white);
+  color: var(--text-color);
   opacity: 0.5;
 }
 
@@ -304,6 +357,7 @@ hr{
   font-size: 36px;
   text-align: center;
   letter-spacing: -0.03em;
+  color: var(--text-color);
 }
 
 #features .box .box-container .trial-btn{
@@ -420,6 +474,7 @@ hr{
   font-size: 56px;
   line-height: 64px;
   letter-spacing: -0.04em;
+  color: var(--text-color);
 }
 
 ul li{
@@ -437,6 +492,7 @@ ul li .item{
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  color: var(--text-color);
 }
 
 .price-container .plans{
@@ -476,12 +532,12 @@ ul li .item{
 .price-container .plans .basic-plan{
   width: 400px;
   height: 630px;
-  position: relative;
+  position: static;
   margin: 0 5px;
   border-radius: 16px;
   padding: 43px;
   margin-left: 40px;
-  background-color: var(--space-cadet-color);
+  background-color: #162044;
 }
 
 .price-container .plans .premimum-plan{
@@ -497,7 +553,11 @@ ul li .item{
 }
 
 #pricing .box .box-container .pricing-titles{
-  flex-direction: column;;
+  flex-direction: column;
+}
+
+.box .box-container .pricing-titles{
+  color: var(--text-color);
 }
 
 #pricing .box {
@@ -551,7 +611,7 @@ footer{
   justify-content: space-between;
   width: 100%;
   height: 120px;
-  background-color: var(--space-cadet-color); 
+  background-color: #162044; 
 }
 
 div ul{
@@ -617,5 +677,3 @@ a{
   text-align: right;
   color: var(--clr-lavender);
 }
-
-
