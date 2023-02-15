@@ -10,8 +10,8 @@ This is a small project that is a Workshop at Softuni. It is a Safia website Lan
 * JavaScript
 
 ##  Project Extra Features
-* switching the theme from light to dark
-* in the header there is a navigation that leads to each sections
+* Switching the theme from light to dark
+* In the header there is a navigation that leads to each sections
 
 ## Useful Resources
 * Follow the [Figma](https://www.figma.com/community/file/892582971189995704) design for the dark theme
